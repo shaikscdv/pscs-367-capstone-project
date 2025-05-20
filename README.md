@@ -1,99 +1,102 @@
-README.md
-
-# 🎓 EduConnect
-
-EduConnect is a full-stack educational platform designed to bridge the gap between rural and urban students by providing access to engineering courses, downloadable video lectures, and seamless interaction between teachers and students.
-
-## 📁 Project Structure
-
-EduConnect/
-│
-├── backend/ # Node.js + Express backend API
-├── frontend/ # React (TypeScript, Tailwind, Shadcn UI) frontend
-├── .env # Environment variables (for local setup)
-├── .dist/ # Build or deployment folder (optional)
-└── README.md # Project documentation
+## Educonnect : *Connecting Teacher and Students Seamlessly !*
 
 
----
+## 📑 Synopsis 
 
-## 🚀 Features
+- Elevate education with streamlined communication, attendance, exams, and collaborative discussions—an efficient, secure platform fostering improved teacher-student collaboration.
+- The application is optimized with code-splitting techniques using React's `react-lazy` and `Suspense` for lazy loading, along with an `error boundary` fallback UI.
+- Deployed the frontend on `AWS Amplify` and the backend on `AWS Elastic Beanstalk`
 
-- 👨‍🏫 Role-based access (Student / Teacher / Admin)
-- 🎥 Upload and stream lecture videos
-- 💾 Download lectures for offline access
-- 📚 Browse and enroll in engineering courses
-- 🔒 JWT-based authentication
-- 🧠 Tracks student learning progress
 
----
 
-## ⚙️ Technologies Used
+## 📜 Features
 
-**Frontend**:
-- React.js (with TypeScript)
-- Tailwind CSS
-- Shadcn UI
-- Axios
+1. **Authentication and Authorization:**
+    - Secure user authentication using JWT tokens and Bcrypt.js for password hashing.
+    - Three roles: Student, Teacher, and Admin.
 
-**Backend**:
-- Node.js with Express
-- MySQL with Sequelize ORM
-- JWT Authentication
-- Multer for file upload
+2. **Teacher Functionality:**
+    - View timetable and choose subjects directly from it.
+    - Take and update student attendance for particular subjects.
+    - Download attendance reports in xls format with minimum criteria.
+    - Enter and manage marks with proper restrictions on the limit of marks.
+    - Download marks reports by choosing subjects.
+    - Solve student doubts through the discussion forum and chat.
+    - Update profile.
 
----
+4. **Student Functionality:**
+    - View attendance with percentage.
+    - Filter attendance by subject, date range, and sort options.
+    - Ask doubts to teachers through the discussion forum.
+    - Update profile.
 
-## 🛠️ Setup Instructions
+5. **Admin Functionality:**
+    - Create, manage, and assign subjects to teachers.
+    - Create teacher accounts , manage it and send credentials via email.
+    - Create and manage student accounts.
+    - Create timetables for teachers with teacher's assign subjects.
+     
 
-### 1. Clone the repository
+## 🛠️Tech Stack
 
-```bash
-git clone https://github.com/<your-username>/EduConnect.git
-cd EduConnect
+**Client:** 
+* React
+* Context API
+* CSS
+* Socket.io
 
-2. Setup environment variables
+**Server:** 
+* NodeJs
+* Express
+* Nodemailer
+* Crypto-JS
+* Socket
 
-Create a .env file in the root and add:
 
-PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=educonnect_db
-JWT_SECRET=your_jwt_secret
+**Database:**
+* MongoDB 
 
-3. Install backend dependencies
 
-cd backend
-npm install
+## ⚙️ Installation
 
-4. Install frontend dependencies
+1. Clone the repository:
 
-cd ../frontend
-npm install
+   ```bash
+   git clone https://github.com/Adityajparmar37/EduConnect.git
+   ```
 
-5. Run the application
+2. Go to backend and run 
+    ```bash
+    cd backend
+    npm install
+    ```
 
-Start backend:
+3. Go to frontend and run
+    ```bash
+    cd frontend
+    npm install
+    ```
 
-cd ../backend
-npm run dev
+4. Setup .env file 
+    ```bash
+    PORT = Port Number ( eg 3500 )
+    MONGO_URI = "Your MongoDB Database URI"
 
-Start frontend:
+    JWT_KEY = Your secret key
 
-cd ../frontend
-npm run dev
+    KeyCrypt="Encryption key"
 
-📸 Screenshots
+    EMAIL= "Email to send order confirmation mail"
+    MAILPASS = "Google app-pass" 
+    ```
 
-Add screenshots here of key pages like login, dashboard, video lecture, etc.
-🧠 Contributors
+5. To Run Project
+    ```bash
 
-    👤 Shaik Thaheer (Team Lead)
+    cd frontend
+    npm start run 
 
-    👥 Project Team Members
-
-📃 License
-
-This project is licensed for educational purposes. Contact the team for reuse or collaboration.
+    cd backend
+    npm run dev
+    ```
+ 🤞🏻 *Hope you find project useful*
